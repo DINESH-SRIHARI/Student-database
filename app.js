@@ -39,7 +39,7 @@ app.get('/',(req,res)=>{
 app.get('/home',(req,res)=>{
     res.render('home')
 })
-app.post('/home',async(req,res)=>{
+app.post('/',async(req,res)=>{
     let data=await new Model({
         name:req.body.name,
         mail:req.body.mail
@@ -53,7 +53,6 @@ app.get('/all',async(req,res)=>{
 app.post('/edit', async (req, res) => {
     let data = await Model.findOne({ mail: req.body.mail });
     res.render('edit', { user: data });
-    console.log(data)
 });
 
 app.post('/delete',async(req,res)=>{
