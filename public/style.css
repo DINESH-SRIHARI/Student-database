@@ -6,3 +6,16 @@
     background-color: black ;
     color: aqua;
 }
+@media(max-width:430px){
+    .width{
+        width: 350px;
+        margin: 40px;
+    }
+}
+@media(min-width:430px){
+    .width{
+        width: 600px;
+        margin: 100px;
+        margin-left: 350px;
+    }
+}
